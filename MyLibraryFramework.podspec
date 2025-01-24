@@ -11,7 +11,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/luismendezc/iosLibrary.git', :tag => s.version }
   s.ios.deployment_target = '17.6'
   s.source_files  = 'MyLibraryFramework/MyLibraryFramework/**/*.{swift,h}'
-  s.resources     = 'MyLibraryFramework/MyLibraryFramework/Resources/**/*'
+  s.resource_bundles = {
+  'MyLibraryFramework' => ['MyLibraryFramework/MyLibraryFramework/Resources/**/*']
+}
   s.dependency    'lottie-ios', '~> 4.0'
   s.swift_versions = ['5.0', '5.5', '5.8'] 
 end

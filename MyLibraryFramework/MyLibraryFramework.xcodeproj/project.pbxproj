@@ -7,8 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F97CA830957DA8AFE18F20B7 /* Pods_MyLibraryFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19B5512FB6E24231134E2C2 /* Pods_MyLibraryFramework.framework */; };
+		BBDA72DC2D443D6F000ED376 /* Pods_MyLibraryFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19B5512FB6E24231134E2C2 /* Pods_MyLibraryFramework.framework */; };
+		BBDA72DD2D443D6F000ED376 /* Pods_MyLibraryFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B19B5512FB6E24231134E2C2 /* Pods_MyLibraryFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BBDA72DE2D443D6F000ED376 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BBDA72DD2D443D6F000ED376 /* Pods_MyLibraryFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E252EFAD49F35A14208193C /* Pods-MyLibraryFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLibraryFramework.debug.xcconfig"; path = "Target Support Files/Pods-MyLibraryFramework/Pods-MyLibraryFramework.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F97CA830957DA8AFE18F20B7 /* Pods_MyLibraryFramework.framework in Frameworks */,
+				BBDA72DC2D443D6F000ED376 /* Pods_MyLibraryFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +122,7 @@
 				BB4186852D44198A0040A811 /* Sources */,
 				BB4186862D44198A0040A811 /* Frameworks */,
 				BB4186872D44198A0040A811 /* Resources */,
+				BBDA72DE2D443D6F000ED376 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -10,10 +10,22 @@ import Lottie
 
 class MyLibraryContentViewController: UIViewController {
     private var completion: (String) -> Void
-    private let animationView = LottieAnimationView(name: "mexico_animation")
-    
+    private let animationView: LottieAnimationView
+
     init(completion: @escaping (String) -> Void) {
         self.completion = completion
+
+        // Locate the Resources bundle inside the framework
+        let frameworkBundle = Bundle(for: MyLibraryContentViewController.self)
+        guard let resourceBundleURL = frameworkBundle.url(forResource: "MyLibraryFramework", withExtension: "bundle"),
+              let resourceBundle = Bundle(url: resourceBundleURL),
+              let animation = LottieAnimation.named("mexico_animation", bundle: resourceBundle) else {
+            fatalError("Failed to locate or load MyLibraryFramework.bundle or mexico_animation.json")
+        }
+
+        // Initialize the animation view with the correct animation
+        self.animationView = LottieAnimationView(animation: animation)
+
         super.init(nibName: nil, bundle: nil)
     }
 
