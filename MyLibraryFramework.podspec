@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'MyLibraryFramework'
-  s.version      = '0.0.1'
+  s.version      = '0.0.2'
   s.summary      = 'A library for presenting animated views.'
   s.description  = <<-DESC
   MyLibraryFramework provides an easy way to present navigation controllers with Lottie animations and callbacks.
@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '17.6'
   s.source_files  = 'MyLibraryFramework/MyLibraryFramework/**/*.{swift,h}'
   s.resource_bundles = {
-  'MyLibraryFramework' => ['MyLibraryFramework/MyLibraryFramework/Resources/**/*']
-}
+    'MyLibraryFramework' => ['MyLibraryFramework/MyLibraryFramework/Resources/**/*']
+  }
   s.dependency    'lottie-ios', '~> 4.0'
   s.swift_versions = ['5.0', '5.5', '5.8'] 
 end
