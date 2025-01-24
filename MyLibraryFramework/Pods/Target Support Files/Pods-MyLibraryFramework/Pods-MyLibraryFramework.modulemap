@@ -1,0 +1,6 @@
+framework module Pods_MyLibraryFramework {
+  umbrella header "Pods-MyLibraryFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}
